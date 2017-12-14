@@ -1,2 +1,2 @@
 # LocalDns
-LocalDns解析方式比较
+LocalDns解析方式优缺点比较
