@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bBJ-gc-DXu"/>
+                        <viewControllerLayoutGuide type="bottom" id="DAF-dU-zXs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="758-KX-E1E">
+                                <rect key="frame" x="150" y="220" width="74" height="34"/>
+                                <state key="normal" title="手动解析">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAction1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Pw-P4-TLH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sk8-ps-lPG">
+                                <rect key="frame" x="150" y="304" width="74" height="34"/>
+                                <state key="normal" title="自动解析">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAction2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHc-cN-1Xh"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WZE-Jk-Iio">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="lK9-uO-hO9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pXl-MO-o8a"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="758-KX-E1E" firstAttribute="top" secondItem="bBJ-gc-DXu" secondAttribute="bottom" constant="200" id="E6x-UR-Xtg"/>
+                            <constraint firstItem="WZE-Jk-Iio" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EyJ-TR-Uk7"/>
+                            <constraint firstItem="sk8-ps-lPG" firstAttribute="top" secondItem="758-KX-E1E" secondAttribute="bottom" constant="50" id="FQm-Pp-XP1"/>
+                            <constraint firstItem="758-KX-E1E" firstAttribute="centerX" secondItem="sk8-ps-lPG" secondAttribute="centerX" id="Rcb-IJ-iAx"/>
+                            <constraint firstItem="DAF-dU-zXs" firstAttribute="top" secondItem="WZE-Jk-Iio" secondAttribute="bottom" id="UhQ-UM-GFW"/>
+                            <constraint firstAttribute="trailing" secondItem="WZE-Jk-Iio" secondAttribute="trailing" id="boj-Jh-HxP"/>
+                            <constraint firstItem="WZE-Jk-Iio" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="iNa-rO-l9b"/>
+                            <constraint firstItem="758-KX-E1E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="kp1-US-02P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="WZE-Jk-Iio" id="6du-FQ-Te4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
